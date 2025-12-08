@@ -1,0 +1,2153 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>則成出租车 - 柬埔寨金边专业出行服务</title>
+    <meta name="description" content="則成出租车 - 柬埔寨金边专业出租车服务，24小时全天候为您提供安全、舒适、快捷的出行体验。联系电话：099 999 377 / 883 860 666">
+    <meta name="keywords" content="則成出租车,柬埔寨出租车,金边出租车,德崇机场接送,24小时出租车,099999377,883860666">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Khmer:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#1A237E">
+    
+    <!-- 结构化数据标记 -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "則成出租车",
+      "description": "柬埔寨金边专业出租车服务，24小时全天候为您提供安全、舒适、快捷的出行体验。",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Phnom Penh",
+        "addressRegion": "Phnom Penh",
+        "addressCountry": "Cambodia"
+      },
+      "telephone": ["099999377", "883860666"],
+      "openingHours": ["Mo-Su 00:00-23:59"],
+      "serviceType": "Taxi Service",
+      "priceRange": "$",
+      "areaServed": ["Phnom Penh", "Techo International Airport", "Chrey Thum"],
+      "url": "https://zecheng-taxi.com"
+    }
+    </script>
+    
+    <style>
+        /* 重置和基础样式 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', 'Noto Sans Khmer', 'Segoe UI', sans-serif;
+        }
+        
+        :root {
+            --primary-color: #FFC107;
+            --secondary-color: #1A237E;
+            --accent-color: #F44336;
+            --light-color: #F5F5F5;
+            --dark-color: #212121;
+            --gray-color: #757575;
+            --green-color: #4CAF50;
+            --success-color: #4CAF50;
+            --warning-color: #FF9800;
+        }
+        
+        body {
+            line-height: 1.6;
+            color: var(--dark-color);
+            background-color: var(--light-color);
+            font-size: 16px;
+            overflow-x: hidden;
+            -webkit-tap-highlight-color: transparent;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 100%;
+            padding: 0 15px;
+            margin: 0 auto;
+        }
+        
+        /* 加载动画 */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* 顶部栏 - 移动端优化 */
+        .top-bar {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            font-size: 0.9rem;
+            position: relative;
+            z-index: 1002;
+        }
+        
+        .top-bar .contact-numbers {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 5px;
+        }
+        
+        .top-bar .contact-numbers a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            transition: all 0.3s;
+        }
+        
+        .top-bar .contact-numbers a:hover {
+            color: white;
+        }
+        
+        .top-bar .hours {
+            font-size: 0.85rem;
+            color: #ddd;
+        }
+        
+        .language-switcher {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            display: flex;
+            gap: 5px;
+            z-index: 1001;
+        }
+        
+        .lang-btn {
+            padding: 5px 10px;
+            border: 1px solid rgba(255,255,255,0.3);
+            background: rgba(0,0,0,0.2);
+            color: white;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .lang-btn.active {
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+            font-weight: 600;
+        }
+        
+        /* 头部样式 */
+        header {
+            background-color: white;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .logo i {
+            color: var(--primary-color);
+            font-size: 1.8rem;
+        }
+        
+        .logo h1 {
+            font-size: 1.4rem;
+            color: var(--secondary-color);
+            line-height: 1.2;
+        }
+        
+        .logo span {
+            color: var(--accent-color);
+        }
+        
+        .menu-toggle {
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--secondary-color);
+        }
+        
+        /* 移动端导航菜单 */
+        .mobile-nav {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 80%;
+            height: 100%;
+            background-color: white;
+            z-index: 1100;
+            transition: right 0.3s ease;
+            box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+            overflow-y: auto;
+        }
+        
+        .mobile-nav.active {
+            right: 0;
+        }
+        
+        .nav-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 15px;
+            background-color: var(--secondary-color);
+            color: white;
+        }
+        
+        .nav-header h3 {
+            font-size: 1.2rem;
+            color: var(--primary-color);
+        }
+        
+        .close-nav {
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: white;
+        }
+        
+        .mobile-nav ul {
+            list-style: none;
+            padding: 20px 0;
+        }
+        
+        .mobile-nav ul li {
+            border-bottom: 1px solid #eee;
+        }
+        
+        .mobile-nav ul li a {
+            display: block;
+            padding: 15px;
+            color: var(--dark-color);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .mobile-nav ul li a:hover,
+        .mobile-nav ul li a.active {
+            background-color: rgba(255, 193, 7, 0.1);
+            color: var(--secondary-color);
+            border-left: 4px solid var(--primary-color);
+        }
+        
+        .nav-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1050;
+            display: none;
+        }
+        
+        .nav-overlay.active {
+            display: block;
+        }
+        
+        /* 英雄区域 */
+        .hero {
+            background: linear-gradient(rgba(26, 35, 126, 0.85), rgba(26, 35, 126, 0.9)), url('https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 40px 0 60px;
+            text-align: center;
+            margin-bottom: 20px;
+            animation: fadeIn 1s ease;
+        }
+        
+        .hero h2 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+        
+        .hero p {
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto 25px;
+            color: #eee;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            border: 2px solid var(--accent-color);
+            box-shadow: 0 5px 15px rgba(244, 67, 54, 0.3);
+            animation: pulse 2s infinite;
+        }
+        
+        .cta-button:hover {
+            background-color: transparent;
+            color: var(--accent-color);
+            transform: translateY(-3px);
+            animation: none;
+        }
+        
+        /* 快捷按钮区域 */
+        .quick-actions {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        
+        .quick-action {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px 15px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
+        
+        .quick-action:hover {
+            transform: translateY(-5px);
+        }
+        
+        .quick-action i {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        
+        .quick-action h3 {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+            color: var(--secondary-color);
+        }
+        
+        /* 预订表单 */
+        .booking-section {
+            background-color: white;
+            padding: 25px 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            margin-bottom: 30px;
+            animation: fadeIn 1s ease 0.2s both;
+        }
+        
+        .section-title {
+            margin-bottom: 20px;
+            color: var(--secondary-color);
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .section-title h2 {
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background-color: var(--primary-color);
+        }
+        
+        .booking-form .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .booking-form label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--dark-color);
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border 0.3s;
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(255, 193, 7, 0.1);
+        }
+        
+        /* 地图定位相关样式 */
+        .location-selector {
+            margin-top: 10px;
+        }
+        
+        .locate-btn {
+            width: 100%;
+            padding: 12px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .locate-btn:hover {
+            background-color: #3d8b40;
+        }
+        
+        .map-mini {
+            height: 150px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 8px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 600;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .map-mini::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(circle at 30% 40%, rgba(255,255,255,0.2) 2px, transparent 2px),
+                radial-gradient(circle at 70% 60%, rgba(255,255,255,0.2) 2px, transparent 2px),
+                radial-gradient(circle at 40% 70%, rgba(255,255,255,0.2) 2px, transparent 2px);
+            background-size: 50px 50px;
+        }
+        
+        .saved-locations {
+            margin-top: 15px;
+        }
+        
+        .saved-title {
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: var(--secondary-color);
+        }
+        
+        .saved-location-btn {
+            display: inline-block;
+            padding: 8px 15px;
+            background-color: #f0f0f0;
+            border: none;
+            border-radius: 20px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .saved-location-btn:hover {
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+        }
+        
+        /* 价格估算器 */
+        .price-estimator {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 20px;
+            display: none;
+        }
+        
+        .price-estimator.active {
+            display: block;
+            animation: slideIn 0.5s ease;
+        }
+        
+        .price-display {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: var(--secondary-color);
+            margin-top: 10px;
+        }
+        
+        .submit-btn {
+            display: block;
+            width: 100%;
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+            border: none;
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-top: 10px;
+        }
+        
+        .submit-btn:hover {
+            background-color: #ffb300;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(255, 193, 7, 0.3);
+        }
+        
+        /* 服务区域 */
+        .services {
+            margin-bottom: 30px;
+            animation: fadeIn 1s ease 0.4s both;
+        }
+        
+        .service-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            margin-bottom: 20px;
+            transition: transform 0.3s;
+        }
+        
+        .service-card:active {
+            transform: scale(0.98);
+        }
+        
+        .service-icon {
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+        }
+        
+        .service-content {
+            padding: 20px;
+        }
+        
+        .service-content h3 {
+            margin-bottom: 10px;
+            color: var(--secondary-color);
+            font-size: 1.2rem;
+        }
+        
+        /* 位置区域 */
+        .locations {
+            margin-bottom: 30px;
+            animation: fadeIn 1s ease 0.6s both;
+        }
+        
+        .location-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            margin-bottom: 20px;
+        }
+        
+        .location-header {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .location-header i {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+        }
+        
+        .location-content {
+            padding: 20px;
+        }
+        
+        .location-content p {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        /* 司机实时跟踪 */
+        .driver-track {
+            background-color: white;
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+            display: none;
+        }
+        
+        .driver-track.active {
+            display: block;
+            animation: slideIn 0.5s ease;
+        }
+        
+        .driver-info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+        
+        .driver-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #e0e0e0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: var(--secondary-color);
+        }
+        
+        .driver-details h4 {
+            margin-bottom: 5px;
+            color: var(--secondary-color);
+        }
+        
+        .driver-rating {
+            color: var(--primary-color);
+            font-size: 0.9rem;
+        }
+        
+        .tracking-info {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+        
+        .tracking-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+            font-size: 0.95rem;
+        }
+        
+        .tracking-item:last-child {
+            margin-bottom: 0;
+        }
+        
+        .tracking-item i {
+            color: var(--primary-color);
+            width: 20px;
+        }
+        
+        .track-progress {
+            margin: 20px 0;
+        }
+        
+        .progress-bar {
+            height: 6px;
+            background-color: #e0e0e0;
+            border-radius: 3px;
+            margin-bottom: 10px;
+            overflow: hidden;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #4CAF50, #8BC34A);
+            border-radius: 3px;
+            transition: width 0.5s ease;
+        }
+        
+        .progress-labels {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.85rem;
+            color: var(--gray-color);
+        }
+        
+        .track-actions {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        
+        .track-btn {
+            flex: 1;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .call-driver {
+            background-color: #4CAF50;
+            color: white;
+        }
+        
+        .call-driver:hover {
+            background-color: #3d8b40;
+        }
+        
+        .cancel-ride {
+            background-color: #f8f9fa;
+            color: var(--accent-color);
+            border: 2px solid #f0f0f0;
+        }
+        
+        .cancel-ride:hover {
+            background-color: #f0f0f0;
+        }
+        
+        /* 联系方式区域 */
+        .contact-section {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 30px 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            animation: fadeIn 1s ease 0.8s both;
+        }
+        
+        .contact-section .section-title h2 {
+            color: var(--primary-color);
+        }
+        
+        .contact-section .section-title h2::after {
+            background-color: var(--primary-color);
+        }
+        
+        .contact-info {
+            margin-top: 20px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .contact-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        
+        .contact-icon {
+            background-color: rgba(255, 193, 7, 0.2);
+            color: var(--primary-color);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            flex-shrink: 0;
+        }
+        
+        .contact-text h3 {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+            color: var(--primary-color);
+        }
+        
+        .contact-text a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.2rem;
+        }
+        
+        /* 底部 */
+        footer {
+            background-color: #0d1440;
+            color: white;
+            padding: 30px 20px 20px;
+        }
+        
+        .footer-logo {
+            margin-bottom: 20px;
+        }
+        
+        .footer-logo h2 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            font-size: 1.5rem;
+        }
+        
+        .footer-links {
+            margin-bottom: 25px;
+        }
+        
+        .footer-links h3 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+        
+        .footer-links ul {
+            list-style: none;
+        }
+        
+        .footer-links ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links ul li a {
+            color: #ddd;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links ul li a:hover {
+            color: var(--primary-color);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+            border-radius: 50%;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: all 0.3s;
+        }
+        
+        .social-links a:hover {
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+            transform: translateY(-3px);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #aaa;
+            font-size: 0.85rem;
+            margin-top: 20px;
+        }
+        
+        /* 浮动联系按钮 */
+        .float-contact {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 100;
+        }
+        
+        .call-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            background-color: var(--green-color);
+            color: white;
+            border-radius: 50%;
+            font-size: 1.8rem;
+            box-shadow: 0 5px 15px rgba(76, 175, 80, 0.4);
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        
+        .call-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 20px rgba(76, 175, 80, 0.6);
+        }
+        
+        /* 通知和提示 */
+        .notification {
+            position: fixed;
+            bottom: 90px;
+            right: 20px;
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            z-index: 100;
+            max-width: 300px;
+            display: none;
+        }
+        
+        .notification.active {
+            display: block;
+            animation: slideIn 0.5s ease;
+        }
+        
+        .notification-content {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .notification-icon {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+        }
+        
+        .close-notification {
+            position: absolute;
+            top: 5px;
+            right: 10px;
+            color: white;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        
+        /* 响应式调整 */
+        @media (min-width: 576px) {
+            .container {
+                max-width: 540px;
+            }
+            
+            .quick-actions {
+                grid-template-columns: repeat(4, 1fr);
+            }
+            
+            .hero h2 {
+                font-size: 2.2rem;
+            }
+        }
+        
+        @media (min-width: 768px) {
+            .container {
+                max-width: 720px;
+            }
+            
+            .hero {
+                padding: 60px 0 80px;
+            }
+            
+            .booking-section {
+                padding: 30px;
+            }
+        }
+        
+        @media (min-width: 992px) {
+            .container {
+                max-width: 960px;
+            }
+            
+            .mobile-nav {
+                width: 40%;
+            }
+        }
+        
+        @media (min-width: 1200px) {
+            .container {
+                max-width: 1140px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 顶部联系栏 -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="contact-numbers">
+                <a href="tel:099999377">
+                    <i class="fas fa-phone-alt"></i> 099 999 377
+                </a>
+                <a href="tel:883860666">
+                    <i class="fas fa-mobile-alt"></i> 883 860 666
+                </a>
+            </div>
+            <div class="hours">
+                <i class="fas fa-clock"></i> 24小时营业 | 金边 & 德崇国际机场
+            </div>
+            <div class="language-switcher">
+                <button class="lang-btn active" data-lang="zh">中文</button>
+                <button class="lang-btn" data-lang="km">ខ្មែរ</button>
+                <button class="lang-btn" data-lang="en">EN</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 头部 -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <i class="fas fa-taxi"></i>
+                <h1 data-i18n="title">則成<span data-i18n="taxi">出租车</span></h1>
+            </div>
+            
+            <div class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- 移动端导航菜单 -->
+    <div class="nav-overlay" id="navOverlay"></div>
+    
+    <div class="mobile-nav" id="mobileNav">
+        <div class="nav-header">
+            <h3 data-i18n="title">則成出租车</h3>
+            <div class="close-nav" id="closeNav">
+                <i class="fas fa-times"></i>
+            </div>
+        </div>
+        <ul>
+            <li><a href="#home" class="active" data-i18n="home">首页</a></li>
+            <li><a href="#booking" data-i18n="bookRide">立即叫车</a></li>
+            <li><a href="#services" data-i18n="ourServices">我们的服务</a></li>
+            <li><a href="#locations" data-i18n="serviceAreas">服务区域</a></li>
+            <li><a href="#contact" data-i18n="contact">联系我们</a></li>
+        </ul>
+    </div>
+
+    <!-- 英雄区域 -->
+    <section class="hero" id="home">
+        <div class="container">
+            <h2><i class="fas fa-taxi"></i> <span data-i18n="title">則成出租车</span></h2>
+            <p data-i18n="slogan">柬埔寨金边专业出租车服务，24小时全天候为您提供安全、舒适、快捷的出行体验。覆盖金边市区、德崇国际机场及周边地区。</p>
+            <a href="#booking" class="cta-button" data-i18n="bookNow">立即叫车 <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </section>
+
+    <!-- 主要内容 -->
+    <main class="container">
+        <!-- 快捷按钮 -->
+        <div class="quick-actions">
+            <div class="quick-action" id="quickCall">
+                <i class="fas fa-phone-alt"></i>
+                <h3 data-i18n="phoneBooking">电话叫车</h3>
+                <p data-i18n="directCall">直接拨打</p>
+            </div>
+            <div class="quick-action" id="quickNow">
+                <i class="fas fa-map-marker-alt"></i>
+                <h3 data-i18n="instantRide">即时叫车</h3>
+                <p data-i18n="currentLocation">当前位置</p>
+            </div>
+            <div class="quick-action" id="quickAirport">
+                <i class="fas fa-plane"></i>
+                <h3 data-i18n="airportPickup">机场接送</h3>
+                <p data-i18n="techoAirport">德崇机场</p>
+            </div>
+            <div class="quick-action" id="quickReserve">
+                <i class="fas fa-clock"></i>
+                <h3 data-i18n="reservation">预约用车</h3>
+                <p data-i18n="advanceBooking">提前预订</p>
+            </div>
+        </div>
+
+        <!-- 预订表单 -->
+        <section class="booking-section" id="booking">
+            <div class="section-title">
+                <h2><i class="fas fa-car"></i> <span data-i18n="bookRide">立即叫车</span></h2>
+                <p data-i18n="formSubtitle">填写信息，我们将在5分钟内与您联系</p>
+            </div>
+            
+            <form class="booking-form" id="bookingForm">
+                <div class="form-group">
+                    <label for="pickup"><i class="fas fa-map-marker-alt"></i> <span data-i18n="pickupLocation">上车地点</span></label>
+                    <input type="text" id="pickup" class="form-control" placeholder="请输入您的上车地址" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="destination"><i class="fas fa-flag-checkered"></i> <span data-i18n="destination">目的地</span></label>
+                    <input type="text" id="destination" class="form-control" placeholder="请输入您的目的地" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="location-pickup"><i class="fas fa-crosshairs"></i> <span data-i18n="locatePickup">定位上车点</span></label>
+                    <div class="location-selector">
+                        <button type="button" class="locate-btn" id="locatePickup">
+                            <i class="fas fa-location-arrow"></i> <span data-i18n="getCurrentLocation">获取当前位置</span>
+                        </button>
+                        <div class="map-mini" id="pickupMap">
+                            <span data-i18n="mapPlaceholder">点击上方按钮定位</span>
+                        </div>
+                        <div class="saved-locations">
+                            <p class="saved-title" data-i18n="commonLocations">常用地点：</p>
+                            <button type="button" class="saved-location-btn" data-location="德崇国际机场 T1航站楼">
+                                <i class="fas fa-plane"></i> <span data-i18n="airportT1">德崇机场 T1</span>
+                            </button>
+                            <button type="button" class="saved-location-btn" data-location="中央市场">
+                                <i class="fas fa-shopping-cart"></i> <span data-i18n="centralMarket">中央市场</span>
+                            </button>
+                            <button type="button" class="saved-location-btn" data-location="金边皇宫">
+                                <i class="fas fa-landmark"></i> <span data-i18n="royalPalace">金边皇宫</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="passengers"><i class="fas fa-users"></i> <span data-i18n="passengerCount">乘客人数</span></label>
+                    <select id="passengers" class="form-control" required>
+                        <option value="" data-i18n="selectPassengers">请选择人数</option>
+                        <option value="1">1人</option>
+                        <option value="2">2人</option>
+                        <option value="3">3人</option>
+                        <option value="4">4人</option>
+                        <option value="5+">5人及以上</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="carType"><i class="fas fa-car"></i> <span data-i18n="carType">车型选择</span></label>
+                    <select id="carType" class="form-control" required>
+                        <option value="" data-i18n="selectCarType">请选择车型</option>
+                        <option value="economy" data-i18n="economyCar">经济型轿车</option>
+                        <option value="comfort" data-i18n="comfortCar">舒适型轿车</option>
+                        <option value="suv" data-i18n="suvCar">SUV/越野车</option>
+                        <option value="van" data-i18n="vanCar">商务车/面包车</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="name"><i class="fas fa-user"></i> <span data-i18n="yourName">您的姓名</span></label>
+                    <input type="text" id="name" class="form-control" placeholder="请输入您的姓名" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone"><i class="fas fa-phone"></i> <span data-i18n="phoneNumber">联系电话</span></label>
+                    <input type="tel" id="phone" class="form-control" placeholder="请输入您的电话号码" required>
+                </div>
+                
+                <!-- 价格估算器 -->
+                <div class="price-estimator" id="priceEstimator">
+                    <div class="section-title">
+                        <h3><i class="fas fa-calculator"></i> <span data-i18n="priceEstimate">费用估算</span></h3>
+                    </div>
+                    <div class="price-display" id="priceDisplay">
+                        <span data-i18n="estimatedCost">预估费用：</span>
+                        <span id="priceValue">--</span>
+                    </div>
+                </div>
+                
+                <button type="submit" class="submit-btn">
+                    <i class="fas fa-paper-plane"></i> <span data-i18n="submitRequest">提交叫车请求</span>
+                </button>
+            </form>
+            
+            <!-- 司机跟踪面板 -->
+            <div class="driver-track" id="driverTrack">
+                <h4><i class="fas fa-taxi"></i> <span data-i18n="driverAccepted">司机已接单</span></h4>
+                <div class="driver-info">
+                    <div class="driver-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="driver-details">
+                        <h4 data-i18n="driverName">司机：Sarath</h4>
+                        <div class="driver-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            4.7 <span data-i18n="tripsCount">(128次行程)</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tracking-info">
+                    <div class="tracking-item">
+                        <i class="fas fa-car"></i>
+                        <span data-i18n="licensePlate">车牌：金边 2A-1234</span>
+                    </div>
+                    <div class="tracking-item">
+                        <i class="fas fa-clock"></i>
+                        <span data-i18n="eta">预计到达：5-7分钟</span>
+                    </div>
+                    <div class="tracking-item">
+                        <i class="fas fa-phone"></i>
+                        <span data-i18n="driverPhone">司机电话：012 345 678</span>
+                    </div>
+                </div>
+                
+                <div class="track-progress">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill" style="width: 30%"></div>
+                    </div>
+                    <div class="progress-labels">
+                        <span data-i18n="driverLocation">司机位置</span>
+                        <span data-i18n="pickupPoint">您的上车点</span>
+                    </div>
+                </div>
+                
+                <div class="track-actions">
+                    <button class="track-btn call-driver" id="callDriverBtn">
+                        <i class="fas fa-phone"></i> <span data-i18n="callDriver">联系司机</span>
+                    </button>
+                    <button class="track-btn cancel-ride" id="cancelRideBtn">
+                        <i class="fas fa-times"></i> <span data-i18n="cancelRide">取消行程</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 服务区域 -->
+        <section class="services" id="services">
+            <div class="section-title">
+                <h2><i class="fas fa-concierge-bell"></i> <span data-i18n="ourServices">我们的服务</span></h2>
+                <p data-i18n="servicesSubtitle">专业出租车服务，满足您的各种出行需求</p>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-plane"></i>
+                </div>
+                <div class="service-content">
+                    <h3 data-i18n="airportService">机场接送服务</h3>
+                    <p data-i18n="airportServiceDesc">提供德崇国际机场(PNH)的接送服务，司机可举牌接机，协助搬运行李，确保您准时到达航班。</p>
+                </div>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-city"></i>
+                </div>
+                <div class="service-content">
+                    <h3 data-i18n="cityTravel">金边市内出行</h3>
+                    <p data-i18n="cityTravelDesc">覆盖金边全城，24小时全天候服务。快速响应，专业司机熟悉金边所有道路和地点。</p>
+                </div>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-hotel"></i>
+                </div>
+                <div class="service-content">
+                    <h3 data-i18n="hotelService">酒店接送服务</h3>
+                    <p data-i18n="hotelServiceDesc">与金边各大酒店合作，提供酒店接送服务，方便游客和商务人士出行。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 服务位置 -->
+        <section class="locations" id="locations">
+            <div class="section-title">
+                <h2><i class="fas fa-map-marked-alt"></i> <span data-i18n="serviceAreas">服务区域</span></h2>
+                <p data-i18n="areasSubtitle">我们主要服务的区域</p>
+            </div>
+            
+            <div class="location-card">
+                <div class="location-header">
+                    <i class="fas fa-map-pin"></i>
+                    <h3 data-i18n="chreyThum">Chrey Thum 区域</h3>
+                </div>
+                <div class="location-content">
+                    <p><i class="fas fa-clock"></i> <strong data-i18n="serviceHours">服务时间:</strong> <span data-i18n="24hours">24小时全天候</span></p>
+                    <p><i class="fas fa-car"></i> <strong data-i18n="carTypes">车型:</strong> <span data-i18n="carsAvailable">轿车、SUV、商务车</span></p>
+                    <p><i class="fas fa-phone"></i> <strong data-i18n="bookingPhone">叫车电话:</strong> 099 999 377 / 883 860 666</p>
+                </div>
+            </div>
+            
+            <div class="location-card">
+                <div class="location-header">
+                    <i class="fas fa-city"></i>
+                    <h3 data-i18n="phnomPenhCenter">金边市中心</h3>
+                </div>
+                <div class="location-content">
+                    <p><i class="fas fa-clock"></i> <strong data-i18n="serviceHours">服务时间:</strong> <span data-i18n="24hours">24小时全天候</span></p>
+                    <p><i class="fas fa-car"></i> <strong data-i18n="carTypes">车型:</strong> <span data-i18n="allCars">所有车型均可</span></p>
+                    <p><i class="fas fa-star"></i> <strong data-i18n="features">特色:</strong> <span data-i18n="popularAreas">中央市场、皇宫、河边等热门区域</span></p>
+                </div>
+            </div>
+            
+            <div class="location-card">
+                <div class="location-header">
+                    <i class="fas fa-plane-departure"></i>
+                    <h3 data-i18n="techoAirportFull">德崇国际机场 (PNH)</h3>
+                </div>
+                <div class="location-content">
+                    <p><i class="fas fa-clock"></i> <strong data-i18n="serviceHours">服务时间:</strong> <span data-i18n="24hours">24小时全天候</span></p>
+                    <p><i class="fas fa-car"></i> <strong data-i18n="carTypes">车型:</strong> <span data-i18n="airportCars">机场专车服务</span></p>
+                    <p><i class="fas fa-check-circle"></i> <strong data-i18n="features">特色:</strong> <span data-i18n="airportFeatures">举牌接机、行李协助、航班跟踪</span></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 联系方式 -->
+        <section class="contact-section" id="contact">
+            <div class="section-title">
+                <h2><i class="fas fa-address-book"></i> <span data-i18n="contact">联系我们</span></h2>
+                <p data-i18n="contactSubtitle">24小时客服，随时为您服务</p>
+            </div>
+            
+            <div class="contact-info">
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <div class="contact-text">
+                        <h3 data-i18n="primaryPhone">主要联系电话</h3>
+                        <a href="tel:099999377">099 999 377</a>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <div class="contact-text">
+                        <h3 data-i18n="secondaryPhone">备用联系电话</h3>
+                        <a href="tel:883860666">883 860 666</a>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="contact-text">
+                        <h3 data-i18n="businessHours">营业时间</h3>
+                        <p data-i18n="24hours">24小时全天候服务</p>
+                        <p data-i18n="allYear">全年无休，包括节假日</p>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="contact-text">
+                        <h3 data-i18n="serviceAreas">服务区域</h3>
+                        <p data-i18n="areasList">Chrey Thum, 金边全城, 德崇国际机场</p>
+                        <p data-i18n="surroundingAreas">以及周边地区</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 底部 -->
+    <footer>
+        <div class="container">
+            <div class="footer-logo">
+                <h2 data-i18n="title">則成出租车</h2>
+                <p data-i18n="footerSlogan">柬埔寨金边专业出租车服务</p>
+                <p data-i18n="footerValues">安全 · 舒适 · 快捷 · 可靠</p>
+            </div>
+            
+            <div class="footer-links">
+                <h3 data-i18n="quickLinks">快速链接</h3>
+                <ul>
+                    <li><a href="#home" data-i18n="home">首页</a></li>
+                    <li><a href="#booking" data-i18n="bookRide">立即叫车</a></li>
+                    <li><a href="#services" data-i18n="ourServices">我们的服务</a></li>
+                    <li><a href="#locations" data-i18n="serviceAreas">服务区域</a></li>
+                    <li><a href="#contact" data-i18n="contact">联系我们</a></li>
+                </ul>
+                
+                <div class="social-links">
+                    <a href="https://facebook.com" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://telegram.org" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
+                    <a href="https://whatsapp.com" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="tel:099999377" aria-label="Call"><i class="fas fa-phone-alt"></i></a>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 <span data-i18n="title">則成出租车</span> <span data-i18n="allRightsReserved">版权所有</span> | <span data-i18n="hotline">服务热线:</span> 099 999 377 / 883 860 666</p>
+                <p>Chrey Thum, Phnom Penh, Cambodia</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 浮动联系按钮 -->
+    <div class="float-contact">
+        <a href="tel:099999377" class="call-button" aria-label="拨打电话">
+            <i class="fas fa-phone-alt"></i>
+        </a>
+    </div>
+
+    <!-- 通知 -->
+    <div class="notification" id="notification">
+        <div class="close-notification" id="closeNotification">&times;</div>
+        <div class="notification-content">
+            <div class="notification-icon">
+                <i class="fas fa-taxi"></i>
+            </div>
+            <div>
+                <h4 id="notificationTitle" data-i18n="bookingSubmitted">预订已提交</h4>
+                <p id="notificationMessage" data-i18n="driverOnWay">司机正在路上，请稍候</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 页面加载优化
+        document.addEventListener('DOMContentLoaded', function() {
+            // 设置默认日期和时间
+            const tomorrow = new Date();
+            tomorrow.setDate(tomorrow.getDate() + 1);
+            const formattedDate = tomorrow.toISOString().split('T')[0];
+            
+            const now = new Date();
+            now.setHours(now.getHours() + 2);
+            const hours = now.getHours().toString().padStart(2, '0');
+            const minutes = now.getMinutes().toString().padStart(2, '0');
+            
+            console.log("則成出租车网站已加载完成");
+            console.log("服务热线: 099 999 377 / 883 860 666");
+            console.log("服务区域: Chrey Thum, 金边, 德崇国际机场");
+            
+            // 请求通知权限
+            requestNotificationPermission();
+            
+            // 加载语言偏好
+            loadLanguagePreference();
+            
+            // 初始化组件
+            initComponents();
+        });
+        
+        // 初始化组件
+        function initComponents() {
+            // 移动端菜单切换
+            const menuToggle = document.getElementById('menuToggle');
+            const mobileNav = document.getElementById('mobileNav');
+            const closeNav = document.getElementById('closeNav');
+            const navOverlay = document.getElementById('navOverlay');
+            
+            menuToggle.addEventListener('click', function() {
+                mobileNav.classList.add('active');
+                navOverlay.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+            
+            closeNav.addEventListener('click', function() {
+                mobileNav.classList.remove('active');
+                navOverlay.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            });
+            
+            navOverlay.addEventListener('click', function() {
+                mobileNav.classList.remove('active');
+                navOverlay.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            });
+            
+            // 导航链接点击后关闭菜单
+            document.querySelectorAll('.mobile-nav a').forEach(link => {
+                link.addEventListener('click', function() {
+                    mobileNav.classList.remove('active');
+                    navOverlay.classList.remove('active');
+                    document.body.style.overflow = 'auto';
+                });
+            });
+            
+            // 表单提交处理
+            document.getElementById('bookingForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // 获取表单数据
+                const pickup = document.getElementById('pickup').value;
+                const destination = document.getElementById('destination').value;
+                const passengers = document.getElementById('passengers').value;
+                const carType = document.getElementById('carType').value;
+                const name = document.getElementById('name').value;
+                const phone = document.getElementById('phone').value;
+                
+                // 显示成功消息
+                const message = currentLang === 'zh' 
+                    ? `感谢 ${name} 的叫车请求！\n\n您的行程信息：\n上车地点：${pickup}\n目的地：${destination}\n乘客人数：${passengers}\n车型：${carType}\n联系电话：${phone}\n\n我们的调度员将在5分钟内与您联系确认。\n您也可以直接拨打：099 999 377`
+                    : currentLang === 'km'
+                    ? `សូមអរគុណ ${name} សម្រាប់ការហៅរថយន្ត!\n\nព័ត៌មានធ្វើដំណើររបស់អ្នក៖\nទីតាំងឡើងរថយន្ត៖ ${pickup}\nគោលដៅ៖ ${destination}\nចំនួនអ្នកដំណើរ៖ ${passengers}\nប្រភេទរថយន្ត៖ ${carType}\nលេខទូរស័ព្ទ៖ ${phone}\n\nក្រុមការងាររបស់យើងនឹងទាក់ទងអ្នកក្នុងរយៈពេល 5 នាទីដើម្បីបញ្ជាក់ការកក់ទុក។\nអ្នកក៏អាចទូរស័ព្ទមកកាន់ 099 999 377 ផ្ទាល់បានដែរ។`
+                    : `Thank you ${name} for your booking request!\n\nYour trip details:\nPickup: ${pickup}\nDestination: ${destination}\nPassengers: ${passengers}\nCar Type: ${carType}\nPhone: ${phone}\n\nOur dispatcher will contact you within 5 minutes to confirm.\nYou can also call directly: 099 999 377`;
+                
+                alert(message);
+                
+                // 显示司机跟踪面板
+                setTimeout(() => {
+                    document.getElementById('driverTrack').classList.add('active');
+                    startDriverTracking();
+                    showNotification(
+                        currentLang === 'zh' ? '司机已接单' : 
+                        currentLang === 'km' ? 'អ្នកបើកបរបានទទួលយកការកក់ទុក' : 
+                        'Driver has accepted your ride',
+                        currentLang === 'zh' ? '司机正在前往您的上车点' : 
+                        currentLang === 'km' ? 'អ្នកបើកបរកំពុងមកកាន់ទីតាំងឡើងរថយន្តរបស់អ្នក' : 
+                        'Driver is on the way to your pickup location'
+                    );
+                }, 1000);
+                
+                // 重置表单
+                this.reset();
+                
+                // 滚动到司机跟踪面板
+                setTimeout(() => {
+                    document.getElementById('driverTrack').scrollIntoView({behavior: 'smooth'});
+                }, 1500);
+            });
+            
+            // 快捷按钮功能
+            document.getElementById('quickCall').addEventListener('click', function() {
+                window.location.href = 'tel:099999377';
+            });
+            
+            document.getElementById('quickNow').addEventListener('click', function() {
+                document.getElementById('booking').scrollIntoView({behavior: 'smooth'});
+                getCurrentLocation();
+            });
+            
+            document.getElementById('quickAirport').addEventListener('click', function() {
+                document.getElementById('booking').scrollIntoView({behavior: 'smooth'});
+                document.getElementById('pickup').value = currentLang === 'zh' ? '德崇国际机场 T1航站楼' : 
+                    currentLang === 'km' ? 'ព្រលានយន្តហោះតេជោ អាគារ T1' : 
+                    'Techo International Airport Terminal 1';
+                document.getElementById('destination').focus();
+                updatePriceEstimation();
+            });
+            
+            document.getElementById('quickReserve').addEventListener('click', function() {
+                document.getElementById('booking').scrollIntoView({behavior: 'smooth'});
+                document.getElementById('pickup').focus();
+            });
+            
+            // 定位功能
+            document.getElementById('locatePickup').addEventListener('click', getCurrentLocation);
+            
+            // 常用地点按钮
+            document.querySelectorAll('.saved-location-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    document.getElementById('pickup').value = this.dataset.location;
+                    updatePriceEstimation();
+                });
+            });
+            
+            // 司机跟踪功能
+            document.getElementById('callDriverBtn').addEventListener('click', function() {
+                window.location.href = 'tel:012345678';
+            });
+            
+            document.getElementById('cancelRideBtn').addEventListener('click', function() {
+                if (confirm(currentLang === 'zh' ? '确定要取消行程吗？' : 
+                           currentLang === 'km' ? 'តើអ្នកពិតជាចង់លុបចោលការធ្វើដំណើរនេះមែនទេ?' : 
+                           'Are you sure you want to cancel this ride?')) {
+                    document.getElementById('driverTrack').classList.remove('active');
+                    showNotification(
+                        currentLang === 'zh' ? '行程已取消' : 
+                        currentLang === 'km' ? 'ការធ្វើដំណើរត្រូវបានលុបចោល' : 
+                        'Ride cancelled',
+                        currentLang === 'zh' ? '您已成功取消本次行程' : 
+                        currentLang === 'km' ? 'អ្នកបានលុបចោលការធ្វើដំណើរនេះដោយជោគជ័យ' : 
+                        'You have successfully cancelled this ride'
+                    );
+                }
+            });
+            
+            // 通知关闭
+            document.getElementById('closeNotification').addEventListener('click', function() {
+                document.getElementById('notification').classList.remove('active');
+            });
+            
+            // 语言切换
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    switchLanguage(this.dataset.lang);
+                });
+            });
+            
+            // 实时价格估算
+            document.getElementById('pickup').addEventListener('input', updatePriceEstimation);
+            document.getElementById('destination').addEventListener('input', updatePriceEstimation);
+            document.getElementById('carType').addEventListener('change', updatePriceEstimation);
+            document.getElementById('passengers').addEventListener('change', updatePriceEstimation);
+        }
+        
+        // 多语言支持
+        const translations = {
+            zh: {
+                title: "則成出租车",
+                taxi: "出租车",
+                slogan: "柬埔寨金边专业出租车服务，24小时全天候为您提供安全、舒适、快捷的出行体验。覆盖金边市区、德崇国际机场及周边地区。",
+                home: "首页",
+                bookRide: "立即叫车",
+                ourServices: "我们的服务",
+                serviceAreas: "服务区域",
+                contact: "联系我们",
+                phoneBooking: "电话叫车",
+                directCall: "直接拨打",
+                instantRide: "即时叫车",
+                currentLocation: "当前位置",
+                airportPickup: "机场接送",
+                techoAirport: "德崇机场",
+                reservation: "预约用车",
+                advanceBooking: "提前预订",
+                formSubtitle: "填写信息，我们将在5分钟内与您联系",
+                pickupLocation: "上车地点",
+                destination: "目的地",
+                locatePickup: "定位上车点",
+                getCurrentLocation: "获取当前位置",
+                mapPlaceholder: "点击上方按钮定位",
+                commonLocations: "常用地点：",
+                airportT1: "德崇机场 T1",
+                centralMarket: "中央市场",
+                royalPalace: "金边皇宫",
+                passengerCount: "乘客人数",
+                selectPassengers: "请选择人数",
+                carType: "车型选择",
+                selectCarType: "请选择车型",
+                economyCar: "经济型轿车",
+                comfortCar: "舒适型轿车",
+                suvCar: "SUV/越野车",
+                vanCar: "商务车/面包车",
+                yourName: "您的姓名",
+                phoneNumber: "联系电话",
+                priceEstimate: "费用估算",
+                estimatedCost: "预估费用：",
+                submitRequest: "提交叫车请求",
+                driverAccepted: "司机已接单",
+                driverName: "司机：Sarath",
+                tripsCount: "(128次行程)",
+                licensePlate: "车牌：金边 2A-1234",
+                eta: "预计到达：5-7分钟",
+                driverPhone: "司机电话：012 345 678",
+                driverLocation: "司机位置",
+                pickupPoint: "您的上车点",
+                callDriver: "联系司机",
+                cancelRide: "取消行程",
+                servicesSubtitle: "专业出租车服务，满足您的各种出行需求",
+                airportService: "机场接送服务",
+                airportServiceDesc: "提供德崇国际机场(PNH)的接送服务，司机可举牌接机，协助搬运行李，确保您准时到达航班。",
+                cityTravel: "金边市内出行",
+                cityTravelDesc: "覆盖金边全城，24小时全天候服务。快速响应，专业司机熟悉金边所有道路和地点。",
+                hotelService: "酒店接送服务",
+                hotelServiceDesc: "与金边各大酒店合作，提供酒店接送服务，方便游客和商务人士出行。",
+                areasSubtitle: "我们主要服务的区域",
+                chreyThum: "Chrey Thum 区域",
+                serviceHours: "服务时间:",
+                24hours: "24小时全天候",
+                carTypes: "车型:",
+                carsAvailable: "轿车、SUV、商务车",
+                bookingPhone: "叫车电话:",
+                phnomPenhCenter: "金边市中心",
+                allCars: "所有车型均可",
+                features: "特色:",
+                popularAreas: "中央市场、皇宫、河边等热门区域",
+                techoAirportFull: "德崇国际机场 (PNH)",
+                airportCars: "机场专车服务",
+                airportFeatures: "举牌接机、行李协助、航班跟踪",
+                contactSubtitle: "24小时客服，随时为您服务",
+                primaryPhone: "主要联系电话",
+                secondaryPhone: "备用联系电话",
+                businessHours: "营业时间",
+                allYear: "全年无休，包括节假日",
+                areasList: "Chrey Thum, 金边全城, 德崇国际机场",
+                surroundingAreas: "以及周边地区",
+                footerSlogan: "柬埔寨金边专业出租车服务",
+                footerValues: "安全 · 舒适 · 快捷 · 可靠",
+                quickLinks: "快速链接",
+                allRightsReserved: "版权所有",
+                hotline: "服务热线:",
+                bookingSubmitted: "预订已提交",
+                driverOnWay: "司机正在路上，请稍候",
+                bookNow: "立即叫车"
+            },
+            km: {
+                title: "ឡាន​អូតូហ្សី ហ្សេឆេង",
+                taxi: "ឡានអូតូហ្សី",
+                slogan: "សេវាកម្មឡានអូតូហ្សីវិជ្ជាជីវៈនៅភ្នំពេញ កម្ពុជា ផ្តល់សេវាកម្មសុវត្ថិភាព ស្រួល និងរហ័ស 24 ម៉ោងក្នុងមួយថ្ងៃ។ គ្របដណ្តប់ទីក្រុងភ្នំពេញ ព្រលានយន្តហោះតេជោ និងតំបន់ជុំវិញ។",
+                home: "ទំព័រដើម",
+                bookRide: "ហៅរថយន្តភ្លាមៗ",
+                ourServices: "សេវាកម្មរបស់យើង",
+                serviceAreas: "តំបន់សេវាកម្ម",
+                contact: "ទំនាក់ទំនង",
+                phoneBooking: "ហៅរថយន្តតាមទូរស័ព្ទ",
+                directCall: "ទូរស័ព្ទផ្ទាល់",
+                instantRide: "ហៅរថយន្តភ្លាម",
+                currentLocation: "ទីតាំងបច្ចុប្បន្ន",
+                airportPickup: "ទាក់ទងព្រលានយន្តហោះ",
+                techoAirport: "ព្រលានយន្តហោះតេជោ",
+                reservation: "កក់ទុកជាមុន",
+                advanceBooking: "កក់ទុកមុន",
+                formSubtitle: "បំពេញព័ត៌មាន យើងនឹងទាក់ទងអ្នកក្នុងរយៈពេល 5 នាទី",
+                pickupLocation: "ទីតាំងឡើងរថយន្ត",
+                destination: "គោលដៅ",
+                locatePickup: "កំណត់ទីតាំងឡើងរថយន្ត",
+                getCurrentLocation: "ទទួលទីតាំងបច្ចុប្បន្ន",
+                mapPlaceholder: "ចុចប៊ូតុងខាងលើដើម្បីកំណត់ទីតាំង",
+                commonLocations: "ទីតាំងធម្មតា៖",
+                airportT1: "ព្រលានយន្តហោះតេជោ T1",
+                centralMarket: "ផ្សារធំ",
+                royalPalace: "ព្រះបរមរាជវាំង",
+                passengerCount: "ចំនួនអ្នកដំណើរ",
+                selectPassengers: "សូមជ្រើសរើសចំនួន",
+                carType: "ប្រភេទរថយន្ត",
+                selectCarType: "សូមជ្រើសរើសប្រភេទរថយន្ត",
+                economyCar: "រថយន្តសេដ្ឋកិច្ច",
+                comfortCar: "រថយន្តស្រួល",
+                suvCar: "រថយន្ត SUV/ផ្លូវភ្នំ",
+                vanCar: "រថយន្តពាណិជ្ជកម្ម/ឡានអ្នកដំណើរ",
+                yourName: "ឈ្មោះរបស់អ្នក",
+                phoneNumber: "លេខទូរស័ព្ទ",
+                priceEstimate: "ការប៉ាន់ស្មានតម្លៃ",
+                estimatedCost: "តម្លៃប៉ាន់ស្មាន៖",
+                submitRequest: "ដាក់សំណើហៅរថយន្ត",
+                driverAccepted: "អ្នកបើកបរបានទទួលយកការកក់ទុក",
+                driverName: "អ្នកបើកបរ៖ សារ៉ាត",
+                tripsCount: "(១២៨ ដំណើរ)",
+                licensePlate: "ផ្លាកលេខ៖ ភ្នំពេញ ២អេ-១២៣៤",
+                eta: "ពេលវេលាមកដល់ប៉ាន់ស្មាន៖ ៥-៧ នាទី",
+                driverPhone: "លេខទូរស័ព្ទអ្នកបើកបរ៖ ០១២ ៣៤៥ ៦៧៨",
+                driverLocation: "ទីតាំងអ្នកបើកបរ",
+                pickupPoint: "ទីតាំងឡើងរថយន្តរបស់អ្នក",
+                callDriver: "ទាក់ទងអ្នកបើកបរ",
+                cancelRide: "លុបចោលការធ្វើដំណើរ",
+                servicesSubtitle: "សេវាកម្មឡានអូតូហ្សីវិជ្ជាជីវៈ ដើម្បីបំពេញតម្រូវការធ្វើដំណើរផ្សេងៗរបស់អ្នក",
+                airportService: "សេវាកម្មទាក់ទងព្រលានយន្តហោះ",
+                airportServiceDesc: "ផ្តល់សេវាកម្មទាក់ទងព្រលានយន្តហោះតេជោ (PNH) អ្នកបើកបរអាចដាក់សញ្ញាទទួល ជួយដឹកទំនិញ ធានាថាអ្នកមកដល់ជើងហោះហើរគ្រប់ពេលវេលា។",
+                cityTravel: "ការធ្វើដំណើរនៅទីក្រុងភ្នំពេញ",
+                cityTravelDesc: "គ្របដណ្តប់ទីក្រុងភ្នំពេញទាំងមូល សេវាកម្ម 24 ម៉ោងក្នុងមួយថ្ងៃ។ ឆ្លើយតបយ៉ាងរហ័ស អ្នកបើកបរវិជ្ជាជីវៈស្គាល់ផ្លូវនិងទីតាំងទាំងអស់នៅភ្នំពេញ។",
+                hotelService: "សេវាកម្មទាក់ទងសណ្ឋាគារ",
+                hotelServiceDesc: "សហការជាមួយសណ្ឋាគារធំៗនៅភ្នំពេញ ផ្តល់សេវាកម្មទាក់ទងសណ្ឋាគារ ដើម្បីភាពស្រួលសម្រាប់ភ្ញៀវទេសចរនិងអ្នកជំនួញ។",
+                areasSubtitle: "តំបន់សេវាកម្មចម្បងរបស់យើង",
+                chreyThum: "តំបន់ជ្រៃធំ",
+                serviceHours: "ម៉ោងសេវាកម្ម៖",
+                24hours: "24 ម៉ោង",
+                carTypes: "ប្រភេទរថយន្ត៖",
+                carsAvailable: "រថយន្ត, SUV, ឡានពាណិជ្ជកម្ម",
+                bookingPhone: "លេខហៅរថយន្ត៖",
+                phnomPenhCenter: "កណ្តាលទីក្រុងភ្នំពេញ",
+                allCars: "រថយន្តគ្រប់ប្រភេទ",
+                features: "លក្ខណៈពិសេស៖",
+                popularAreas: "ផ្សារធំ, ព្រះបរមរាជវាំង, តាមដងទនេ្ល ជាដើម",
+                techoAirportFull: "ព្រលានយន្តហោះតេជោ (PNH)",
+                airportCars: "សេវាកម្មរថយន្តពិសេសសម្រាប់ព្រលានយន្តហោះ",
+                airportFeatures: "ដាក់សញ្ញាទទួល, ជួយដឹកទំនិញ, តាមដានជើងហោះហើរ",
+                contactSubtitle: "សេវាកម្មអតិថិជន 24 ម៉ោង ត្រៀមខ្លួនផ្តល់សេវាកម្មអ្នកជានិច្ច",
+                primaryPhone: "លេខទូរស័ព្ទសំខាន់",
+                secondaryPhone: "លេខទូរស័ព្ទបម្រុង",
+                businessHours: "ម៉ោងធ្វើការ",
+                allYear: "ធ្វើការពេញមួយឆ្នាំ រួមទាំងថ្ងៃបុណ្យ",
+                areasList: "ជ្រៃធំ, ទីក្រុងភ្នំពេញទាំងមូល, ព្រលានយន្តហោះតេជោ",
+                surroundingAreas: "និងតំបន់ជុំវិញ",
+                footerSlogan: "សេវាកម្មឡានអូតូហ្សីវិជ្ជាជីវៈនៅភ្នំពេញ កម្ពុជា",
+                footerValues: "សុវត្ថិភាព · ភាពស្រួល · លឿន · អាចទុកចិត្តបាន",
+                quickLinks: "តំណភ្ជាប់រហ័ស",
+                allRightsReserved: "សិទ្ធិគ្រប់យ៉ាងត្រូវបានរក្សាទុក",
+                hotline: "លេខសេវាកម្ម៖",
+                bookingSubmitted: "ការកក់ទុកត្រូវបានដាក់សំណើ",
+                driverOnWay: "អ្នកបើកបរកំពុងមកដល់ សូមរង់ចាំ",
+                bookNow: "ហៅរថយន្តភ្លាមៗ"
+            },
+            en: {
+                title: "Zecheng Taxi",
+                taxi: "Taxi",
+                slogan: "Professional taxi service in Phnom Penh, Cambodia, providing safe, comfortable, and fast transportation 24/7. Covering Phnom Penh city, Techo International Airport and surrounding areas.",
+                home: "Home",
+                bookRide: "Book a Ride",
+                ourServices: "Our Services",
+                serviceAreas: "Service Areas",
+                contact: "Contact Us",
+                phoneBooking: "Phone Booking",
+                directCall: "Direct Call",
+                instantRide: "Instant Ride",
+                currentLocation: "Current Location",
+                airportPickup: "Airport Pickup",
+                techoAirport: "Techo Airport",
+                reservation: "Reservation",
+                advanceBooking: "Advance Booking",
+                formSubtitle: "Fill in the information, we will contact you within 5 minutes",
+                pickupLocation: "Pickup Location",
+                destination: "Destination",
+                locatePickup: "Locate Pickup Point",
+                getCurrentLocation: "Get Current Location",
+                mapPlaceholder: "Click button above to locate",
+                commonLocations: "Common Locations:",
+                airportT1: "Techo Airport T1",
+                centralMarket: "Central Market",
+                royalPalace: "Royal Palace",
+                passengerCount: "Passenger Count",
+                selectPassengers: "Please select number",
+                carType: "Car Type",
+                selectCarType: "Please select car type",
+                economyCar: "Economy Car",
+                comfortCar: "Comfort Car",
+                suvCar: "SUV/Off-road",
+                vanCar: "Business Van/Passenger Van",
+                yourName: "Your Name",
+                phoneNumber: "Phone Number",
+                priceEstimate: "Price Estimate",
+                estimatedCost: "Estimated Cost:",
+                submitRequest: "Submit Booking Request",
+                driverAccepted: "Driver Accepted",
+                driverName: "Driver: Sarath",
+                tripsCount: "(128 trips)",
+                licensePlate: "License Plate: PP 2A-1234",
+                eta: "Estimated Arrival: 5-7 minutes",
+                driverPhone: "Driver Phone: 012 345 678",
+                driverLocation: "Driver Location",
+                pickupPoint: "Your Pickup Point",
+                callDriver: "Call Driver",
+                cancelRide: "Cancel Ride",
+                servicesSubtitle: "Professional taxi service to meet your various travel needs",
+                airportService: "Airport Pickup Service",
+                airportServiceDesc: "Provide pickup service at Techo International Airport (PNH), drivers can hold signs to meet you, assist with luggage, ensure you arrive at your flight on time.",
+                cityTravel: "Phnom Penh City Travel",
+                cityTravelDesc: "Covering the entire Phnom Penh city, 24/7 service. Quick response, professional drivers familiar with all roads and locations in Phnom Penh.",
+                hotelService: "Hotel Pickup Service",
+                hotelServiceDesc: "Cooperate with major hotels in Phnom Penh to provide hotel pickup service, convenient for tourists and business people.",
+                areasSubtitle: "Our main service areas",
+                chreyThum: "Chrey Thum Area",
+                serviceHours: "Service Hours:",
+                24hours: "24 hours",
+                carTypes: "Car Types:",
+                carsAvailable: "Car, SUV, Business Van",
+                bookingPhone: "Booking Phone:",
+                phnomPenhCenter: "Phnom Penh City Center",
+                allCars: "All car types available",
+                features: "Features:",
+                popularAreas: "Central Market, Royal Palace, Riverside and other popular areas",
+                techoAirportFull: "Techo International Airport (PNH)",
+                airportCars: "Airport special car service",
+                airportFeatures: "Sign holding, luggage assistance, flight tracking",
+                contactSubtitle: "24-hour customer service, ready to serve you anytime",
+                primaryPhone: "Primary Contact Number",
+                secondaryPhone: "Secondary Contact Number",
+                businessHours: "Business Hours",
+                allYear: "All year round, including holidays",
+                areasList: "Chrey Thum, entire Phnom Penh city, Techo International Airport",
+                surroundingAreas: "and surrounding areas",
+                footerSlogan: "Professional taxi service in Phnom Penh, Cambodia",
+                footerValues: "Safe · Comfortable · Fast · Reliable",
+                quickLinks: "Quick Links",
+                allRightsReserved: "All rights reserved",
+                hotline: "Hotline:",
+                bookingSubmitted: "Booking Submitted",
+                driverOnWay: "Driver is on the way, please wait",
+                bookNow: "Book Now"
+            }
+        };
+
+        let currentLang = 'zh';
+
+        // 加载语言偏好
+        function loadLanguagePreference() {
+            const savedLang = localStorage.getItem('preferredLanguage');
+            if (savedLang && translations[savedLang]) {
+                switchLanguage(savedLang);
+            }
+        }
+
+        // 切换语言
+        function switchLanguage(lang) {
+            currentLang = lang;
+            
+            // 更新所有可翻译元素
+            document.querySelectorAll('[data-i18n]').forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                if (translations[lang] && translations[lang][key]) {
+                    if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                        element.placeholder = translations[lang][key];
+                    } else {
+                        element.textContent = translations[lang][key];
+                    }
+                }
+            });
+            
+            // 更新选项文本
+            document.querySelectorAll('option[data-i18n]').forEach(option => {
+                const key = option.getAttribute('data-i18n');
+                if (translations[lang] && translations[lang][key]) {
+                    option.textContent = translations[lang][key];
+                }
+            });
+            
+            // 更新按钮状态
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.dataset.lang === lang) {
+                    btn.classList.add('active');
+                }
+            });
+            
+            // 保存语言偏好
+            localStorage.setItem('preferredLanguage', lang);
+            
+            // 重新计算价格
+            updatePriceEstimation();
+        }
+        
+        // 获取当前位置
+        function getCurrentLocation() {
+            const mapElement = document.getElementById('pickupMap');
+            const pickupInput = document.getElementById('pickup');
+            
+            mapElement.innerHTML = '<i class="fas fa-spinner fa-spin"></i> ' + 
+                (currentLang === 'zh' ? '定位中...' : 
+                 currentLang === 'km' ? 'កំពុងកំណត់ទីតាំង...' : 
+                 'Locating...');
+            
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(
+                    function(position) {
+                        const lat = position.coords.latitude;
+                        const lng = position.coords.longitude;
+                        
+                        mapElement.innerHTML = '<i class="fas fa-map-marker-alt"></i> ' + 
+                            (currentLang === 'zh' ? '已获取您的位置' : 
+                             currentLang === 'km' ? 'បានទទួលទីតាំងរបស់អ្នក' : 
+                             'Location acquired');
+                        
+                        pickupInput.value = currentLang === 'zh' ? '当前位置 (自动获取)' : 
+                                           currentLang === 'km' ? 'ទីតាំងបច្ចុប្បន្ន (ទទួលបានដោយស្វ័យប្រវត្តិ)' : 
+                                           'Current Location (Auto-detected)';
+                        
+                        updatePriceEstimation();
+                    },
+                    function(error) {
+                        mapElement.innerHTML = '<i class="fas fa-exclamation-triangle"></i> ' + 
+                            (currentLang === 'zh' ? '定位失败，请手动输入' : 
+                             currentLang === 'km' ? 'ការកំណត់ទីតាំងបានបរាជ័យ សូមបញ្ចូលដោយខ្លួនឯង' : 
+                             'Location failed, please enter manually');
+                        
+                        pickupInput.value = currentLang === 'zh' ? '当前位置' : 
+                                           currentLang === 'km' ? 'ទីតាំងបច្ចុប្បន្ន' : 
+                                           'Current Location';
+                    }
+                );
+            } else {
+                mapElement.innerHTML = '<i class="fas fa-exclamation-triangle"></i> ' + 
+                    (currentLang === 'zh' ? '浏览器不支持定位功能' : 
+                     currentLang === 'km' ? 'កម្មវិធីរុករកមិនគាំទ្រមុខងារកំណត់ទីតាំង' : 
+                     'Browser does not support geolocation');
+                
+                pickupInput.value = currentLang === 'zh' ? '当前位置' : 
+                                   currentLang === 'km' ? 'ទីតាំងបច្ចុប្បន្ន' : 
+                                   'Current Location';
+            }
+        }
+        
+        // 价格估算功能
+        function calculatePrice(pickup, destination, carType, passengers) {
+            // 模拟价格计算逻辑
+            const basePrices = {
+                'economy': 5,
+                'comfort': 8,
+                'suv': 12,
+                'van': 15
+            };
+            
+            const passengerMultiplier = {
+                '1': 1.0,
+                '2': 1.0,
+                '3': 1.2,
+                '4': 1.4,
+                '5+': 1.8
+            };
+            
+            const distance = estimateDistance(pickup, destination);
+            const basePrice = basePrices[carType] || 5;
+            const passengerFactor = passengerMultiplier[passengers] || 1.0;
+            const estimatedPrice = Math.round(basePrice * distance * passengerFactor * 100) / 100;
+            
+            return {
+                min: Math.max(3, estimatedPrice - 2),
+                max: estimatedPrice + 3,
+                currency: currentLang === 'km' ? '៛' : '$'
+            };
+        }
+        
+        function estimateDistance(pickup, destination) {
+            // 简单距离估算（实际应使用地图API）
+            const commonLocations = {
+                '德崇国际机场': 0,
+                '德崇国际机场 T1航站楼': 0,
+                'ព្រលានយន្តហោះតេជោ អាគារ T1': 0,
+                'Techo International Airport Terminal 1': 0,
+                '中央市场': 12,
+                'ផ្សារធំ': 12,
+                'Central Market': 12,
+                '金边皇宫': 10,
+                'ព្រះបរមរាជវាំង': 10,
+                'Royal Palace': 10,
+                'Chrey Thum': 8,
+                'ជ្រៃធំ': 8,
+                '当前位置': 5,
+                'ទីតាំងបច្ចុប្បន្ន': 5,
+                'Current Location': 5
+            };
+            
+            const pickupKey = Object.keys(commonLocations).find(key => 
+                pickup.includes(key) || key.includes(pickup));
+            const destKey = Object.keys(commonLocations).find(key => 
+                destination.includes(key) || key.includes(destination));
+            
+            const pickupDist = pickupKey ? commonLocations[pickupKey] : 5;
+            const destDist = destKey ? commonLocations[destKey] : 5;
+            
+            return Math.abs(pickupDist - destDist) || 5;
+        }
+        
+        // 实时表单价格更新
+        function updatePriceEstimation() {
+            const pickup = document.getElementById('pickup').value;
+            const destination = document.getElementById('destination').value;
+            const carType = document.getElementById('carType').value;
+            const passengers = document.getElementById('passengers').value;
+            
+            if (pickup && destination && carType && passengers) {
+                const price = calculatePrice(pickup, destination, carType, passengers);
+                const estimator = document.getElementById('priceEstimator');
+                const priceValue = document.getElementById('priceValue');
+                
+                priceValue.textContent = `${price.min}-${price.max} ${price.currency}`;
+                
+                estimator.classList.add('active');
+            }
+        }
+        
+        // 司机跟踪模拟
+        function startDriverTracking() {
+            const progressFill = document.getElementById('progressFill');
+            let progress = 30;
+            
+            const interval = setInterval(() => {
+                progress += 5;
+                progressFill.style.width = `${progress}%`;
+                
+                if (progress >= 100) {
+                    clearInterval(interval);
+                    showNotification(
+                        currentLang === 'zh' ? '司机已到达' : 
+                        currentLang === 'km' ? 'អ្នកបើកបរបានមកដល់' : 
+                        'Driver has arrived',
+                        currentLang === 'zh' ? '您的司机已在您指定的上车点等待' : 
+                        currentLang === 'km' ? 'អ្នកបើកបរកំពុងរង់ចាំនៅទីតាំងឡើងរថយន្តដែលអ្នកបានបញ្ជាក់' : 
+                        'Your driver is waiting at your specified pickup location'
+                    );
+                }
+            }, 3000);
+        }
+        
+        // 显示通知
+        function showNotification(title, message) {
+            const notification = document.getElementById('notification');
+            const notificationTitle = document.getElementById('notificationTitle');
+            const notificationMessage = document.getElementById('notificationMessage');
+            
+            notificationTitle.textContent = title;
+            notificationMessage.textContent = message;
+            notification.classList.add('active');
+            
+            // 10秒后自动关闭
+            setTimeout(() => {
+                notification.classList.remove('active');
+            }, 10000);
+            
+            // 也显示浏览器通知（如果已授权）
+            showBrowserNotification(title, message);
+        }
+        
+        // 显示浏览器通知
+        function showBrowserNotification(title, body) {
+            if ('Notification' in window && Notification.permission === 'granted') {
+                new Notification(title, { body, icon: 'https://cdn-icons-png.flaticon.com/512/744/744465.png' });
+            }
+        }
+        
+        // 请求通知权限
+        function requestNotificationPermission() {
+            if ('Notification' in window && Notification.permission === 'default') {
+                Notification.requestPermission().then(permission => {
+                    if (permission === 'granted') {
+                        console.log('Notification permission granted');
+                    }
+                });
+            }
+        }
+        
+        // 导航栏滚动效果
+        window.addEventListener('scroll', function() {
+            const navLinks = document.querySelectorAll('.mobile-nav a');
+            const sections = document.querySelectorAll('section, .booking-section, .contact-section');
+            
+            let currentSection = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 100;
+                if (window.scrollY >= sectionTop) {
+                    currentSection = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').substring(1) === currentSection) {
+                    link.classList.add('active');
+                }
+            });
+        });
+        
+        // PWA Service Worker 注册
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/sw.js').then(
+                    function(registration) {
+                        console.log('ServiceWorker registration successful:', registration);
+                    },
+                    function(err) {
+                        console.log('ServiceWorker registration failed:', err);
+                    }
+                );
+            });
+        }
+    </script>
+</body>
+</html>
