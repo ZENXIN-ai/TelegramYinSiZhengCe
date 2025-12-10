@@ -2,87 +2,68 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>則成出租车 - 柬埔寨金边专业出行服务</title>
     <style>
-        /* 重置和基础样式 */
+        /* 基础样式 */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
         
-        :root {
-            --primary-color: #FFC107;
-            --secondary-color: #1A237E;
-            --accent-color: #F44336;
-            --light-color: #F5F5F5;
-            --dark-color: #212121;
-            --gray-color: #757575;
-            --green-color: #4CAF50;
-        }
-        
         body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
             line-height: 1.6;
-            color: var(--dark-color);
-            background-color: var(--light-color);
-            font-size: 16px;
-            overflow-x: hidden;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
-        }
-        
-        .container {
-            width: 100%;
-            max-width: 100%;
-            padding: 0 15px;
-            margin: 0 auto;
+            color: #333;
+            background-color: #f8f9fa;
         }
         
         /* 顶部栏 */
         .top-bar {
-            background-color: var(--secondary-color);
+            background: #1a237e;
             color: white;
-            padding: 10px 0;
             text-align: center;
-            font-size: 0.9rem;
+            padding: 12px 15px;
+            font-size: 14px;
         }
         
-        .top-bar .contact-numbers {
+        .phone-numbers {
             display: flex;
             justify-content: center;
             gap: 20px;
-            flex-wrap: wrap;
             margin-bottom: 5px;
+            flex-wrap: wrap;
         }
         
-        .top-bar .contact-numbers a {
-            color: var(--primary-color);
+        .phone-numbers a {
+            color: #ffd700;
             text-decoration: none;
             font-weight: bold;
-            display: flex;
-            align-items: center;
-            gap: 5px;
+            font-size: 16px;
         }
         
-        .top-bar .hours {
-            font-size: 0.85rem;
-            color: #ddd;
+        .hours {
+            font-size: 13px;
+            color: #ccc;
         }
         
-        /* 头部样式 */
+        /* 头部 */
         header {
-            background-color: white;
-            padding: 15px 0;
+            background: white;
+            padding: 15px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
             position: sticky;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
         }
         
         .header-container {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
         }
         
         .logo {
@@ -91,34 +72,40 @@
             gap: 10px;
         }
         
-        .logo h1 {
-            font-size: 1.4rem;
-            color: var(--secondary-color);
-            line-height: 1.2;
+        .logo-icon {
+            font-size: 24px;
+            color: #ffd700;
         }
         
-        .logo span {
-            color: var(--accent-color);
+        .logo-text {
+            font-size: 20px;
+            font-weight: bold;
+            color: #1a237e;
+        }
+        
+        .logo-text span {
+            color: #f44336;
         }
         
         .menu-toggle {
-            font-size: 1.5rem;
+            font-size: 24px;
+            background: none;
+            border: none;
+            color: #1a237e;
             cursor: pointer;
-            color: var(--secondary-color);
         }
         
-        /* 移动端导航菜单 */
+        /* 导航菜单 */
         .mobile-nav {
             position: fixed;
             top: 0;
             right: -100%;
             width: 80%;
             height: 100%;
-            background-color: white;
+            background: white;
             z-index: 1100;
             transition: right 0.3s ease;
-            box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
-            overflow-y: auto;
+            box-shadow: -5px 0 15px rgba(0,0,0,0.2);
         }
         
         .mobile-nav.active {
@@ -126,48 +113,48 @@
         }
         
         .nav-header {
+            background: #1a237e;
+            color: white;
+            padding: 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px 15px;
-            background-color: var(--secondary-color);
-            color: white;
         }
         
-        .nav-header h3 {
-            font-size: 1.2rem;
-            color: var(--primary-color);
+        .nav-title {
+            color: #ffd700;
+            font-size: 18px;
         }
         
         .close-nav {
-            font-size: 1.5rem;
-            cursor: pointer;
+            font-size: 24px;
+            background: none;
+            border: none;
             color: white;
+            cursor: pointer;
         }
         
-        .mobile-nav ul {
+        .nav-links {
             list-style: none;
             padding: 20px 0;
         }
         
-        .mobile-nav ul li {
+        .nav-links li {
             border-bottom: 1px solid #eee;
         }
         
-        .mobile-nav ul li a {
+        .nav-links a {
             display: block;
-            padding: 15px;
-            color: var(--dark-color);
+            padding: 15px 20px;
+            color: #333;
             text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s;
+            font-weight: 500;
         }
         
-        .mobile-nav ul li a:hover,
-        .mobile-nav ul li a.active {
-            background-color: rgba(255, 193, 7, 0.1);
-            color: var(--secondary-color);
-            border-left: 4px solid var(--primary-color);
+        .nav-links a.active {
+            background: rgba(255, 215, 0, 0.1);
+            color: #1a237e;
+            border-left: 4px solid #ffd700;
         }
         
         .nav-overlay {
@@ -176,7 +163,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
+            background: rgba(0,0,0,0.5);
             z-index: 1050;
             display: none;
         }
@@ -187,46 +174,51 @@
         
         /* 英雄区域 */
         .hero {
-            background: linear-gradient(rgba(26, 35, 126, 0.85), rgba(26, 35, 126, 0.9));
+            background: linear-gradient(135deg, #1a237e, #3949ab);
             color: white;
-            padding: 40px 0 60px;
             text-align: center;
+            padding: 40px 20px;
             margin-bottom: 20px;
         }
         
-        .hero h2 {
-            font-size: 2rem;
+        .hero-title {
+            font-size: 28px;
             margin-bottom: 15px;
-            color: var(--primary-color);
+            color: #ffd700;
         }
         
-        .hero p {
-            font-size: 1.1rem;
-            max-width: 700px;
+        .hero-text {
+            max-width: 600px;
             margin: 0 auto 25px;
+            font-size: 16px;
             color: #eee;
         }
         
         .cta-button {
             display: inline-block;
-            background-color: var(--accent-color);
+            background: #f44336;
             color: white;
             padding: 12px 30px;
-            border-radius: 30px;
+            border-radius: 25px;
             text-decoration: none;
-            font-weight: 600;
-            font-size: 1.1rem;
-            transition: all 0.3s;
-            border: 2px solid var(--accent-color);
+            font-weight: bold;
+            font-size: 16px;
+            border: 2px solid #f44336;
         }
         
         .cta-button:hover {
-            background-color: transparent;
-            color: var(--accent-color);
-            transform: translateY(-3px);
+            background: transparent;
+            color: #f44336;
         }
         
-        /* 快捷按钮区域 */
+        /* 主要内容 */
+        .main-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        /* 快捷按钮 */
         .quick-actions {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -235,112 +227,84 @@
         }
         
         .quick-action {
-            background-color: white;
+            background: white;
             border-radius: 10px;
-            padding: 20px 15px;
+            padding: 20px;
             text-align: center;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            transition: transform 0.3s;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
             cursor: pointer;
         }
         
-        .quick-action:hover {
-            transform: translateY(-5px);
+        .quick-action h3 {
+            color: #1a237e;
+            margin-bottom: 5px;
+            font-size: 16px;
         }
         
-        .quick-action h3 {
-            font-size: 1.1rem;
-            margin-bottom: 5px;
-            color: var(--secondary-color);
+        .quick-action p {
+            color: #666;
+            font-size: 14px;
         }
         
         /* 预订表单 */
         .booking-section {
-            background-color: white;
-            padding: 25px 20px;
+            background: white;
             border-radius: 10px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            padding: 25px;
             margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
         
         .section-title {
+            color: #1a237e;
             margin-bottom: 20px;
-            color: var(--secondary-color);
-            position: relative;
             padding-bottom: 10px;
+            border-bottom: 3px solid #ffd700;
+            font-size: 22px;
         }
         
-        .section-title h2 {
-            font-size: 1.5rem;
-            margin-bottom: 5px;
-        }
-        
-        .section-title h2::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 60px;
-            height: 4px;
-            background-color: var(--primary-color);
-        }
-        
-        .booking-form .form-group {
+        .form-group {
             margin-bottom: 20px;
         }
         
-        .booking-form label {
+        .form-group label {
             display: block;
             margin-bottom: 8px;
-            font-weight: 600;
-            color: var(--dark-color);
+            font-weight: 500;
+            color: #333;
         }
         
         .form-control {
             width: 100%;
             padding: 12px 15px;
             border: 1px solid #ddd;
-            border-radius: 8px;
-            font-size: 1rem;
-            transition: border 0.3s;
-        }
-        
-        .form-control:focus {
-            outline: none;
-            border-color: var(--primary-color);
+            border-radius: 5px;
+            font-size: 16px;
         }
         
         .submit-btn {
-            display: block;
             width: 100%;
-            background-color: var(--primary-color);
-            color: var(--secondary-color);
+            background: #ffd700;
+            color: #1a237e;
             border: none;
             padding: 15px;
-            border-radius: 8px;
-            font-size: 1.1rem;
-            font-weight: 700;
+            border-radius: 5px;
+            font-size: 18px;
+            font-weight: bold;
             cursor: pointer;
-            transition: all 0.3s;
-            margin-top: 10px;
         }
         
         .submit-btn:hover {
-            background-color: #ffb300;
-            transform: translateY(-3px);
+            background: #ffc800;
         }
         
         /* 服务区域 */
-        .services {
-            margin-bottom: 30px;
-        }
-        
         .service-card {
-            background-color: white;
+            background: white;
             border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
             margin-bottom: 20px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
         }
         
         .service-content {
@@ -348,26 +312,27 @@
         }
         
         .service-content h3 {
+            color: #1a237e;
             margin-bottom: 10px;
-            color: var(--secondary-color);
-            font-size: 1.2rem;
+            font-size: 18px;
+        }
+        
+        .service-content p {
+            color: #666;
+            font-size: 15px;
         }
         
         /* 位置区域 */
-        .locations {
-            margin-bottom: 30px;
-        }
-        
         .location-card {
-            background-color: white;
+            background: white;
             border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
             margin-bottom: 20px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
         }
         
         .location-header {
-            background-color: var(--secondary-color);
+            background: #1a237e;
             color: white;
             padding: 15px;
         }
@@ -378,53 +343,56 @@
         
         .location-content p {
             margin-bottom: 10px;
+            color: #333;
         }
         
-        /* 联系方式区域 */
+        /* 联系方式 */
         .contact-section {
-            background-color: var(--secondary-color);
+            background: #1a237e;
             color: white;
-            padding: 30px 20px;
             border-radius: 10px;
+            padding: 25px;
             margin-bottom: 30px;
         }
         
-        .contact-section .section-title h2 {
-            color: var(--primary-color);
-        }
-        
-        .contact-section .section-title h2::after {
-            background-color: var(--primary-color);
-        }
-        
-        .contact-info {
-            margin-top: 20px;
+        .contact-section .section-title {
+            color: #ffd700;
+            border-color: #ffd700;
         }
         
         .contact-item {
             margin-bottom: 20px;
             padding-bottom: 20px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
         }
         
-        .contact-text h3 {
-            font-size: 1.1rem;
+        .contact-item:last-child {
+            border-bottom: none;
+        }
+        
+        .contact-item h3 {
+            color: #ffd700;
             margin-bottom: 5px;
-            color: var(--primary-color);
+            font-size: 16px;
         }
         
-        .contact-text a {
+        .contact-item a {
             color: white;
             text-decoration: none;
-            font-weight: 600;
-            font-size: 1.2rem;
+            font-size: 18px;
+            font-weight: bold;
         }
         
         /* 底部 */
         footer {
-            background-color: #0d1440;
+            background: #0d1440;
             color: white;
             padding: 30px 20px 20px;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
         }
         
         .footer-logo {
@@ -432,9 +400,9 @@
         }
         
         .footer-logo h2 {
-            color: var(--primary-color);
+            color: #ffd700;
             margin-bottom: 10px;
-            font-size: 1.5rem;
+            font-size: 24px;
         }
         
         .footer-links {
@@ -442,40 +410,38 @@
         }
         
         .footer-links h3 {
-            color: var(--primary-color);
+            color: #ffd700;
             margin-bottom: 15px;
-            font-size: 1.2rem;
+            font-size: 18px;
         }
         
         .footer-links ul {
             list-style: none;
         }
         
-        .footer-links ul li {
+        .footer-links li {
             margin-bottom: 10px;
         }
         
-        .footer-links ul li a {
-            color: #ddd;
+        .footer-links a {
+            color: #ccc;
             text-decoration: none;
-            transition: color 0.3s;
         }
         
-        .footer-links ul li a:hover {
-            color: var(--primary-color);
+        .footer-links a:hover {
+            color: #ffd700;
         }
         
         .copyright {
             text-align: center;
             padding-top: 20px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            border-top: 1px solid rgba(255,255,255,0.1);
             color: #aaa;
-            font-size: 0.85rem;
-            margin-top: 20px;
+            font-size: 14px;
         }
         
-        /* 浮动联系按钮 */
-        .float-contact {
+        /* 浮动按钮 */
+        .float-button {
             position: fixed;
             bottom: 20px;
             right: 20px;
@@ -483,41 +449,31 @@
         }
         
         .call-button {
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            display: block;
             width: 60px;
             height: 60px;
-            background-color: var(--green-color);
+            background: #4caf50;
             color: white;
             border-radius: 50%;
-            font-size: 1.8rem;
-            box-shadow: 0 5px 15px rgba(76, 175, 80, 0.4);
+            text-align: center;
+            line-height: 60px;
+            font-size: 24px;
             text-decoration: none;
+            box-shadow: 0 4px 12px rgba(76, 175, 80, 0.4);
         }
         
-        /* 响应式调整 */
-        @media (min-width: 576px) {
-            .container {
-                max-width: 540px;
+        /* 响应式设计 */
+        @media (min-width: 768px) {
+            .hero-title {
+                font-size: 36px;
+            }
+            
+            .hero-text {
+                font-size: 18px;
             }
             
             .quick-actions {
                 grid-template-columns: repeat(4, 1fr);
-            }
-            
-            .hero h2 {
-                font-size: 2.2rem;
-            }
-        }
-        
-        @media (min-width: 768px) {
-            .container {
-                max-width: 720px;
-            }
-            
-            .hero {
-                padding: 60px 0 80px;
             }
             
             .booking-section {
@@ -526,18 +482,8 @@
         }
         
         @media (min-width: 992px) {
-            .container {
-                max-width: 960px;
-            }
-            
             .mobile-nav {
                 width: 40%;
-            }
-        }
-        
-        @media (min-width: 1200px) {
-            .container {
-                max-width: 1140px;
             }
         }
     </style>
@@ -545,46 +491,32 @@
 <body>
     <!-- 顶部联系栏 -->
     <div class="top-bar">
-        <div class="container">
-            <div class="contact-numbers">
-                <a href="tel:099999377">
-                    099 999 377
-                </a>
-                <a href="tel:883860666">
-                    883 860 666
-                </a>
-            </div>
-            <div class="hours">
-                24小时营业 | 金边 & 德崇国际机场
-            </div>
+        <div class="phone-numbers">
+            <a href="tel:099999377">📞 099 999 377</a>
+            <a href="tel:883860666">📱 883 860 666</a>
         </div>
+        <div class="hours">24小时营业 | 金边 & 德崇国际机场</div>
     </div>
 
     <!-- 头部 -->
     <header>
-        <div class="container header-container">
+        <div class="header-container">
             <div class="logo">
-                <div style="color: var(--primary-color); font-size: 1.8rem;">🚕</div>
-                <h1>則成<span>出租车</span></h1>
+                <div class="logo-icon">🚕</div>
+                <div class="logo-text">則成<span>出租车</span></div>
             </div>
-            
-            <div class="menu-toggle" id="menuToggle">
-                ☰
-            </div>
+            <button class="menu-toggle" id="menuToggle">☰</button>
         </div>
     </header>
 
     <!-- 移动端导航菜单 -->
     <div class="nav-overlay" id="navOverlay"></div>
-    
     <div class="mobile-nav" id="mobileNav">
         <div class="nav-header">
-            <h3>則成出租车</h3>
-            <div class="close-nav" id="closeNav">
-                ✕
-            </div>
+            <div class="nav-title">則成出租车</div>
+            <button class="close-nav" id="closeNav">✕</button>
         </div>
-        <ul>
+        <ul class="nav-links">
             <li><a href="#home" class="active">首页</a></li>
             <li><a href="#booking">立即叫车</a></li>
             <li><a href="#services">我们的服务</a></li>
@@ -595,15 +527,13 @@
 
     <!-- 英雄区域 -->
     <section class="hero" id="home">
-        <div class="container">
-            <h2>🚕 則成出租车</h2>
-            <p>柬埔寨金边专业出租车服务，24小时全天候为您提供安全、舒适、快捷的出行体验。覆盖金边市区、德崇国际机场及周边地区。</p>
-            <a href="#booking" class="cta-button">立即叫车 →</a>
-        </div>
+        <h1 class="hero-title">🚕 則成出租车</h1>
+        <p class="hero-text">柬埔寨金边专业出租车服务，24小时全天候为您提供安全、舒适、快捷的出行体验。覆盖金边市区、德崇国际机场及周边地区。</p>
+        <a href="#booking" class="cta-button">立即叫车 →</a>
     </section>
 
     <!-- 主要内容 -->
-    <main class="container">
+    <main class="main-content">
         <!-- 快捷按钮 -->
         <div class="quick-actions">
             <div class="quick-action" id="quickCall">
@@ -626,10 +556,8 @@
 
         <!-- 预订表单 -->
         <section class="booking-section" id="booking">
-            <div class="section-title">
-                <h2>🚗 立即叫车</h2>
-                <p>填写信息，我们将在5分钟内与您联系</p>
-            </div>
+            <h2 class="section-title">🚗 立即叫车</h2>
+            <p style="margin-bottom: 20px; color: #666;">填写信息，我们将在5分钟内与您联系</p>
             
             <form class="booking-form" id="bookingForm">
                 <div class="form-group">
@@ -675,18 +603,14 @@
                     <input type="tel" id="phone" class="form-control" placeholder="请输入您的电话号码" required>
                 </div>
                 
-                <button type="submit" class="submit-btn">
-                    提交叫车请求
-                </button>
+                <button type="submit" class="submit-btn">提交叫车请求</button>
             </form>
         </section>
 
         <!-- 服务区域 -->
         <section class="services" id="services">
-            <div class="section-title">
-                <h2>🛎️ 我们的服务</h2>
-                <p>专业出租车服务，满足您的各种出行需求</p>
-            </div>
+            <h2 class="section-title">🛎️ 我们的服务</h2>
+            <p style="margin-bottom: 20px; color: #666;">专业出租车服务，满足您的各种出行需求</p>
             
             <div class="service-card">
                 <div class="service-content">
@@ -712,10 +636,8 @@
 
         <!-- 服务位置 -->
         <section class="locations" id="locations">
-            <div class="section-title">
-                <h2>📍 服务区域</h2>
-                <p>我们主要服务的区域</p>
-            </div>
+            <h2 class="section-title">📍 服务区域</h2>
+            <p style="margin-bottom: 20px; color: #666;">我们主要服务的区域</p>
             
             <div class="location-card">
                 <div class="location-header">
@@ -753,40 +675,30 @@
 
         <!-- 联系方式 -->
         <section class="contact-section" id="contact">
-            <div class="section-title">
-                <h2>📞 联系我们</h2>
-                <p>24小时客服，随时为您服务</p>
-            </div>
+            <h2 class="section-title">📞 联系我们</h2>
+            <p style="margin-bottom: 20px; color: #ccc;">24小时客服，随时为您服务</p>
             
             <div class="contact-info">
                 <div class="contact-item">
-                    <div class="contact-text">
-                        <h3>主要联系电话</h3>
-                        <a href="tel:099999377">099 999 377</a>
-                    </div>
+                    <h3>主要联系电话</h3>
+                    <a href="tel:099999377">099 999 377</a>
                 </div>
                 
                 <div class="contact-item">
-                    <div class="contact-text">
-                        <h3>备用联系电话</h3>
-                        <a href="tel:883860666">883 860 666</a>
-                    </div>
+                    <h3>备用联系电话</h3>
+                    <a href="tel:883860666">883 860 666</a>
                 </div>
                 
                 <div class="contact-item">
-                    <div class="contact-text">
-                        <h3>营业时间</h3>
-                        <p>24小时全天候服务</p>
-                        <p>全年无休，包括节假日</p>
-                    </div>
+                    <h3>营业时间</h3>
+                    <p>24小时全天候服务</p>
+                    <p>全年无休，包括节假日</p>
                 </div>
                 
                 <div class="contact-item">
-                    <div class="contact-text">
-                        <h3>服务区域</h3>
-                        <p>Chrey Thum, 金边全城, 德崇国际机场</p>
-                        <p>以及周边地区</p>
-                    </div>
+                    <h3>服务区域</h3>
+                    <p>Chrey Thum, 金边全城, 德崇国际机场</p>
+                    <p>以及周边地区</p>
                 </div>
             </div>
         </section>
@@ -794,7 +706,7 @@
 
     <!-- 底部 -->
     <footer>
-        <div class="container">
+        <div class="footer-content">
             <div class="footer-logo">
                 <h2>則成出租车</h2>
                 <p>柬埔寨金边专业出租车服务</p>
@@ -819,43 +731,36 @@
         </div>
     </footer>
 
-    <!-- 浮动联系按钮 -->
-    <div class="float-contact">
-        <a href="tel:099999377" class="call-button">
-            📞
-        </a>
+    <!-- 浮动按钮 -->
+    <div class="float-button">
+        <a href="tel:099999377" class="call-button">📞</a>
     </div>
 
     <script>
         // 移动端菜单切换
-        const menuToggle = document.getElementById('menuToggle');
-        const mobileNav = document.getElementById('mobileNav');
-        const closeNav = document.getElementById('closeNav');
-        const navOverlay = document.getElementById('navOverlay');
-        
-        menuToggle.addEventListener('click', function() {
-            mobileNav.classList.add('active');
-            navOverlay.classList.add('active');
+        document.getElementById('menuToggle').addEventListener('click', function() {
+            document.getElementById('mobileNav').classList.add('active');
+            document.getElementById('navOverlay').classList.add('active');
             document.body.style.overflow = 'hidden';
         });
         
-        closeNav.addEventListener('click', function() {
-            mobileNav.classList.remove('active');
-            navOverlay.classList.remove('active');
+        document.getElementById('closeNav').addEventListener('click', function() {
+            document.getElementById('mobileNav').classList.remove('active');
+            document.getElementById('navOverlay').classList.remove('active');
             document.body.style.overflow = 'auto';
         });
         
-        navOverlay.addEventListener('click', function() {
-            mobileNav.classList.remove('active');
-            navOverlay.classList.remove('active');
+        document.getElementById('navOverlay').addEventListener('click', function() {
+            document.getElementById('mobileNav').classList.remove('active');
+            document.getElementById('navOverlay').classList.remove('active');
             document.body.style.overflow = 'auto';
         });
         
         // 导航链接点击后关闭菜单
-        document.querySelectorAll('.mobile-nav a').forEach(link => {
+        document.querySelectorAll('.nav-links a').forEach(link => {
             link.addEventListener('click', function() {
-                mobileNav.classList.remove('active');
-                navOverlay.classList.remove('active');
+                document.getElementById('mobileNav').classList.remove('active');
+                document.getElementById('navOverlay').classList.remove('active');
                 document.body.style.overflow = 'auto';
             });
         });
@@ -921,7 +826,7 @@
         
         // 导航栏滚动效果
         window.addEventListener('scroll', function() {
-            const navLinks = document.querySelectorAll('.mobile-nav a');
+            const navLinks = document.querySelectorAll('.nav-links a');
             const sections = document.querySelectorAll('section, .booking-section, .contact-section');
             
             let currentSection = '';
@@ -941,7 +846,7 @@
             });
         });
         
-        // 页面加载时显示欢迎信息
+        // 页面加载完成
         window.addEventListener('load', function() {
             console.log("則成出租车网站已加载完成");
             console.log("服务热线: 099 999 377 / 883 860 666");
